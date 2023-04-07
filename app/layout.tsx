@@ -1,5 +1,6 @@
-import './globals.css'
+
 import { Analytics } from "@vercel/analytics/react"
+//export const runtime = 'experimental-edge'
 export const metadata = {
   title: 'IshanKBG',
   description: 'My public journal',
