@@ -59,7 +59,7 @@ export class BlogClient {
     }
   }
 }
-export const blog = new BlogClient(process.env.NOTION_TOKEN!, process.env.NOTION_DATABASE_ID!);
+export const blog = new BlogClient(getEnv().NOTION_TOKEN, getEnv().NOTION_DATABASE_ID);
 type NotionPageArray = {
   object: string;
   id: string;
