@@ -5,10 +5,21 @@ export default async function Home() {
   console.log(posts)
   return (
     <>
-      {posts.map((post) => {
-        <h1>{post.title}</h1>
-      })}
+      {posts.map((post, index) => (
+        <section key={index}>
+          <div>
+            <h2>
+              <Link href={post.slug}>
+                {post.title}
+              </Link>
+            </h2>
+          </div>
+          <p>{post.postedAt.toString()}</p>
+          <p>{post.desc}</p>
+        </section>
+      ))}
     </>
+
   )
 
 }
