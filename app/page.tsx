@@ -1,4 +1,4 @@
-import { blog } from "@/lib/blog-sdk"
+import { blog } from "@/services/blog"
 import Link from "next/link"
 export default async function Home() {
   const posts = await blog.getAllPosts();
@@ -9,7 +9,7 @@ export default async function Home() {
         <section key={index}>
           <div>
             <h2>
-              <Link href={post.slug}>
+              <Link href={`/blog/${post.slug}`}>
                 {post.title}
               </Link>
             </h2>
