@@ -1,8 +1,8 @@
 import { blog } from "@/services/blog"
 import Link from "next/link"
 export default async function Home() {
-  const posts = await blog.getAllPosts();
-  console.log(posts)
+  const posts = await blog.getAllPosts()
+
   return (
     <>
       {posts.map((post, index) => (
