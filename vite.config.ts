@@ -27,6 +27,9 @@ async function getMiniflareBindings() {
 
 export default defineConfig(async () => {
   return {
+    ssr: {
+      external: ['@authjs/core']
+    },
     plugins: [qwikCity({
       platform: await getMiniflareBindings(),
     }), qwikVite(), tsconfigPaths()],
